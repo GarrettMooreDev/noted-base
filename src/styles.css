@@ -20,7 +20,7 @@ a:visited {
 }
 
 a:hover {
-  background-color: pink;
+  background-color: rebeccapurple;
   color: black;
   border-color: palevioletred;
 }
