@@ -4,8 +4,8 @@
   "description": "A notes application because it's 2018 and we're not doing todo lists anymore",
   "main": "src/application.js",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --config ./config/webpack.config.development.js",
-    "build": "rimraf dist && NODE_ENV=production webpack --config ./config/webpack.config.production.js",
+    "start": "NODE_ENV=development webpack-dev-server --config ./config/webpack.config.development.js --openssl-legacy-provider",
+    "build": "rimraf dist && NODE_ENV=production webpack --config ./config/webpack.config.production.js --openssl-legacy-provider",
     "test": "jest",
     "deploy": "yarn run build && aws s3 cp dist/ s3://postterrestrial --recursive"
   },
