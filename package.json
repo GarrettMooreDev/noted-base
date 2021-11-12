@@ -7,7 +7,7 @@
     "start": "NODE_ENV=development webpack-dev-server --config ./config/webpack.config.development.js",
     "build": "rimraf dist && NODE_ENV=production webpack --config ./config/webpack.config.production.js",
     "test": "jest",
-    "deploy": "yarn run build && aws s3 cp dist/ s3://superimportantwebsite.com --recursive"
+    "deploy": "yarn run build && aws s3 cp dist/ s3://postterrestrial --recursive"
   },
   "author": "Steve Kinney <hello@stevekinney.net> (http://stevekinney.net)",
   "license": "MIT",
@@ -62,15 +62,18 @@
     "extract-text-webpack-plugin": "^4.0.0-alpha.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.0.6",
-    "node-sass": "^4.7.2",
+    "node-sass": "^6.0.1",
     "postcss-loader": "^2.1.1",
     "react-hot-loader": "^4.0.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
-    "webpack": "^4.1.1",
+    "webpack": "^4.1.0",
     "webpack-bundle-analyzer": "^2.11.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.1"
+  },
+  "resolutions": {
+    "upath": "1.1.0"
   }
 }
